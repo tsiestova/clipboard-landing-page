@@ -1,7 +1,7 @@
 
 ### Links
 
-- Live Site: [Demo](https://landing-page2-rose.vercel.app/)
+- Live Site: [Demo]()
 
 ### Built with
 
