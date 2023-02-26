@@ -4,4 +4,17 @@ body {
 
 .layout {
   padding: 0 32px;
+
+  @include breakpoint(desktop) {
+    max-width: 1130px;
+    margin: auto;
+    padding: 0 10px;
+  }
+}
+
+.inner-layout {
+  @include breakpoint(desktop) {
+    max-width: 730px;
+    margin: auto;
+  }
 }

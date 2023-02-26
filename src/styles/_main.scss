@@ -1,39 +1,5 @@
-.container__download {
-  &.container__download_top-box {
-    margin-bottom: 160px;
-
-    .container__download_heading {
-      margin-bottom: 16px;
-    }
-
-    .container__download_description {
-      margin-bottom: 48px;
-    }
-
-    .btn_ios {
-      margin-bottom: 24px;
-    }
-  }
-
-  &.container__download_bottom-box {
-    margin-bottom: 170px;
-
-    .container__download_heading {
-      color: var(--color1);
-      font-size: 28px;
-      line-height: 35px;
-      letter-spacing: -0.456522px;
-      margin-bottom: 16px;
-    }
-
-    .container__download_description {
-      margin-bottom: 48px;
-    }
-
-    .btn_ios {
-      margin-bottom: 24px;
-    }
-  }
+.container__download_top-box {
+  margin-bottom: 160px;
 }
 
 .container__download_heading {
@@ -44,60 +10,113 @@
   text-align: center;
   letter-spacing: -0.521739px;
   color: var(--color1);
-  //margin-bottom: 16px;
+  margin-bottom: 16px;
+
+  @include breakpoint(desktop) {
+    font-size: 46px;
+    line-height: 58px;
+    letter-spacing: -0.75px;
+  }
 }
 
 .container__download_description {
+  margin-bottom: 48px;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   text-align: center;
   letter-spacing: 0.12px;
   color: var(--color2);
-  //margin-bottom: 49px;
+
+  @include breakpoint(desktop) {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+  }
+}
+
+.container__download_buttons-wrap {
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
 }
 
 .btn {
   height: 56px;
-  width: 100%;
-  padding: 3px 10px;
+  padding: 0 36px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 30px;
   text-align: center;
   letter-spacing: 0.5px;
   color: var(--color5);
   text-decoration: none;
   border-radius: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  line-height: 56px;
+  max-width: 375px;
 
   &.btn_ios {
     background-color: var(--color3);
     box-shadow: 0 10px 20px rgba(137, 229, 199, 0.503305),
       inset 0 -3px 0 rgba(0, 0, 0, 0.151333);
-    //margin-bottom: 24px;
+    margin: auto auto 24px;
+
+    @include breakpoint(desktop) {
+      margin: 0;
+    }
+
+    &:hover {
+      @include breakpoint(desktop) {
+        background: var(--color8);
+      }
+    }
   }
 
   &.btn_mac {
     background-color: var(--color4);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.0988035),
       inset 0 -3px 0 rgba(0, 0, 0, 0.151333);
+    margin: auto;
+
+    @include breakpoint(desktop) {
+      margin: 0;
+    }
+
+    &:hover {
+      @include breakpoint(desktop) {
+        background: var(--color9);
+      }
+    }
   }
 }
 
-.advantages__item__heading {
+.container__download_top-box {
+  margin-bottom: 160px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 152px;
+  }
+}
+
+.main-container__section_heading {
   font-weight: 600;
   font-size: 28px;
   line-height: 35px;
   text-align: center;
   letter-spacing: -0.456522px;
   color: var(--color1);
-  //margin-bottom: 14px;
+
+  @include breakpoint(desktop) {
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.586957px;
+  }
 }
 
-.advantages__item__description {
+.main-container__section_description {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -106,213 +125,321 @@
   color: var(--color2);
   position: relative;
 
-  &.item__description_keeping {
-    position: relative;
-
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 238px;
-      //margin-top: 65px;
-      background: url("./assets/image-computer.png") no-repeat center center;
-      background-size: contain;
-    }
-  }
-
-  &.item__description_access {
-    position: relative;
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 182px;
-      //margin-top: 65px;
-      background: url("./assets/image-devices.png") no-repeat top center;
-      background-size: 111%;
-    }
+  @include breakpoint(desktop) {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.135px;
   }
 }
 
-.advantages__item__inner-list {
-  position: relative;
+.main-container__section_keep_heading {
+  margin-bottom: 16px;
 }
 
-//pseudo-elements
+.main-container__section_keep_description {
+  margin-bottom: 65px;
+}
 
-.item-workflow {
-  .advantages__inner-item {
-    &:before {
-      content: "";
-      display: block;
-      width: 44px;
-      height: 40px;
-      margin: 0 auto 40px;
-    }
+.section__keep__advantages-item {
+  margin-bottom: 48px;
 
-    &.inner-item__blacklists {
-      &:before {
-        background: url("./assets/icon-blacklist.svg") no-repeat;
-        background-size: contain;
-      }
-    }
-
-    &.inner-item__preview {
-      &:before {
-        background: url("./assets/icon-preview.svg") no-repeat;
-        background-size: contain;
-      }
-    }
-
-    &.inner-item__snippets {
-      &:before {
-        background: url("./assets/icon-text.svg") no-repeat;
-        background-size: contain;
-      }
-    }
+  @include breakpoint(desktop) {
+    margin-bottom: 56px;
   }
 }
 
-.inner-item__heading {
+.section__keep__advantages-item_heading {
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
   letter-spacing: -0.391304px;
   color: var(--color1);
-  //margin-bottom: 10px;
+  margin-bottom: 10px;
+
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
 }
 
-.inner-item__description {
+.section__keep__advantages-item_description {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   text-align: center;
   letter-spacing: 0.12px;
   color: var(--color2);
+
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
+}
+
+.advantages-list_wrap {
+  .layout {
+    @include breakpoint(desktop) {
+      width: 50%;
+      padding: 0 272px 0 109px;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    display: flex;
+  }
+}
+
+.advantages-list__pic__wrap {
+  width: 100%;
+  height: 238px;
+  margin-bottom: 56px;
+
+  @include breakpoint(tablet) {
+    height: 572px;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  @include breakpoint(desktop) {
+    height: 555px;
+    max-width: initial;
+    width: 50%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.main-container__section_keep {
+  margin-bottom: 186px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 166px;
+  }
+}
+
+.main-container__section_access_description {
+  margin-bottom: 64px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 106px;
+  }
+}
+
+.section_access_description__pic__wrap {
+  height: 221px;
+
+  @include breakpoint(tablet) {
+    height: 475px;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 903px;
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include breakpoint(tablet) {
+      object-fit: contain;
+    }
+  }
+}
+
+.main-container__section_access {
+  margin-bottom: 93px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 68px;
+  }
+}
+
+.main-container__section_access_heading {
+  margin-bottom: 16px;
+}
+
+.main-container__section_keep_description {
+  margin-bottom: 64px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 82px;
+  }
+}
+
+.section__keep__advantages-list {
+  height: 100%;
+  align-self: center;
+
+  @include breakpoint(desktop) {
+    width: 50%;
+    align-self: center;
+    padding: 0 241px 0 109px;
+  }
+}
+
+.section_access_wrap {
+  position: relative;
+}
+
+.main-container__section_workflow {
+  margin-bottom: 131px;
+}
+
+.section_workflow__inner-list {
+  @include breakpoint(desktop) {
+    display: flex;
+  }
+}
+
+.main-container__section_workflow_heading {
+  margin-bottom: 11px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 21px;
+  }
+}
+
+.main-container__section_workflow_description {
+  margin-bottom: 90px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 77px;
+  }
+}
+
+.section_workflow__inner-item {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.section_workflow__inner-item_heading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.391304px;
+  color: var(--color1);
+  margin-bottom: 18px;
+}
+
+.section_workflow__inner-item_description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: var(--color2);
+
+  @include breakpoint(desktop) {
+  }
+}
+
+.section_workflow__inner-item_blacklist {
+  position: relative;
+
+  &:before {
+    content: "";
+    background: url("./assets/icon-blacklist.svg") no-repeat;
+    background-size: contain;
+    width: 44px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 40px;
+  }
+}
+
+.section_workflow__inner-item_snippets {
+  position: relative;
+
+  &:before {
+    content: "";
+    background: url("./assets/icon-text.svg") no-repeat;
+    background-size: contain;
+    width: 44px;
+    height: 40px;
+    display: block;
+    margin: auto auto 40px;
+  }
+}
+
+.section_workflow__inner-item_preview {
+  position: relative;
+
+  &:before {
+    content: "";
+    background: url("./assets/icon-preview.svg") no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 32px;
+    display: block;
+    margin: auto auto 40px;
+  }
 }
 
 .main__container__corporation__list {
   text-align: center;
   margin-bottom: 170px;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 105px;
+  }
 }
 
 .corporation__item {
   margin-bottom: 57px;
 
-  &:before {
-    content: "";
-    display: inline-block;
-  }
-
-  &.item__google {
-    &:before {
-      background: url("./assets/logo-google.png") no-repeat;
-      width: 139px;
-      height: 41px;
-      background-size: contain;
-    }
-  }
-  &.item__ibm {
-    &:before {
-      background: url("./assets/logo-ibm.png") no-repeat;
-      width: 121px;
-      height: 60px;
-      background-size: contain;
-    }
-  }
-  &.item__microsoft {
-    &:before {
-      background: url("./assets/logo-microsoft.png") no-repeat;
-      width: 135px;
-      height: 40px;
-      background-size: contain;
-    }
-  }
-  &.item__hewlett {
-    &:before {
-      background: url("./assets/logo-hp.png") no-repeat;
-      width: 113px;
-      height: 47px;
-      background-size: contain;
-    }
-  }
-  &.item__vector-graphic {
-    &:before {
-      background: url("./assets/logo-vector-graphics.png") no-repeat;
-      width: 105px;
-      height: 25px;
-      background-size: contain;
-    }
+  img {
+    margin: auto;
   }
 }
 
-.container__download {
-  &.container__download_bottom-box {
-    .container__download_description {
-      margin-bottom: 45px;
-    }
+.container__download_bottom-box {
+  margin-bottom: 170px;
+
+  @include breakpoint(desktop) {
+    margin-bottom: 149px;
   }
 }
 
-//*********************************  Margins
+.container__download_bottom-box_heading {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: -0.456522px;
+  color: var(--color1);
+  margin-bottom: 16px;
 
-.container__advantages__item {
-  &.item-keeping {
-    margin-bottom: 186px;
-
-    .advantages__item__heading {
-      margin-bottom: 16px;
-    }
-
-    .advantages__item__description {
-      margin-bottom: 56px;
-
-      &:after {
-        margin-top: 65px;
-      }
-    }
-
-    .advantages__inner-item {
-      margin-bottom: 48px;
-    }
-
-    .inner-item__heading {
-      margin-bottom: 10px;
-    }
+  @include breakpoint(desktop) {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 20px;
   }
+}
 
-  &.item-access {
-    margin-bottom: 130px;
+.container__download_bottom-box_description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: var(--color2);
+  margin-bottom: 46px;
 
-    .advantages__item__heading {
-      margin-bottom: 16px;
-    }
-
-    .advantages__item__description {
-      &:after {
-        margin-top: 64px;
-      }
-    }
-  }
-
-  &.item-workflow {
-    margin-bottom: 131px;
-
-    .advantages__item__heading {
-      margin-bottom: 11px;
-    }
-
-    .advantages__item__description {
-      margin-bottom: 90px;
-    }
-
-    .inner-item__heading {
-      margin: 18px;
-    }
-
-    .advantages__inner-item {
-      margin-bottom: 53px;
-    }
+  @include breakpoint(desktop) {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

@@ -4,7 +4,7 @@
       @content;
     }
   } @else if $name == desktop {
-    @media (min-width: 1440px) {
+    @media (min-width: 900px) {
       @content;
     }
   }

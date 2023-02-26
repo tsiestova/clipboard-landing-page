@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -22,124 +21,197 @@
   <body>
     <header class="header">
       <div class="layout">
-        <figure class="logo__wrap">
+        <a class="logo__wrap">
           <img src="./assets/logo.svg" alt="" />
-        </figure>
+        </a>
       </div>
     </header>
-    <main class="main__container">
-      <div class="layout">
+    <main class="main-container">
         <div class="container__download container__download_top-box">
-          <div class="container__download_heading">
-            A history of everything you copy
-          </div>
-          <div class="container__download_description">
-            Clipboard allows you to track and organize everything you copy.
-            Instantly access your clipboard on all your devices.
-          </div>
-          <div class="container__download_button-wrap">
-            <a href="#" class="btn btn_ios">Download for iOS</a>
-            <a href="#" class="btn btn_mac">Download for Mac</a>
+          <div class="layout">
+            <div class="inner-layout">
+              <div class="container__download_heading">
+                A history of everything you copy
+              </div>
+              <div class="container__download_description">
+                Clipboard allows you to track and organize everything you copy.
+                Instantly access your clipboard on all your devices.
+              </div>
+              <div class="container__download_buttons-wrap">
+                <a href="#" class="btn btn_ios">Download for iOS</a>
+                <a href="#" class="btn btn_mac">Download for Mac</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <ul class="container__advantages__list_wrap">
-          <li class="container__advantages__item item-keeping">
-            <div class="advantages__item__heading">
+        <section class="main-container__section main-container__section_keep">
+          <div class="layout">
+          <div class="inner-layout">
+            <div
+              class="main-container__section_heading main-container__section_keep_heading"
+            >
               Keep track of your snippets
             </div>
             <div
-              class="advantages__item__description item__description_keeping"
+              class="main-container__section_description main-container__section_keep_description"
             >
               Clipboard instantly stores any item you copy in the cloud, meaning
               you can access your snippets immediately on all your devices. Our
               Mac and iOS apps will help you organize everything.
             </div>
-            <ul class="advantages__item__inner-list">
-              <li class="advantages__inner-item">
-                <div class="inner-item__heading">Quick Search</div>
-                <div class="inner-item__description">
-                  Easily search your snippets by content, category, web address,
-                  application, and more.
-                </div>
-              </li>
-              <li class="advantages__inner-item">
-                <div class="inner-item__heading">iCloud Sync</div>
-                <div class="inner-item__description">
-                  Instantly saves and syncs snippets across all your devices.
-                </div>
-              </li>
-              <li class="advantages__inner-item">
-                <div class="inner-item__heading">Complete History</div>
-                <div class="inner-item__description">
-                  Retrieve any snippets from the first moment you started using
-                  the app.
-                </div>
-              </li>
-            </ul>
-          </li>
+          </div>
+          </div>
+          <div class="advantages-list_wrap">
+            <figure class="advantages-list__pic__wrap">
+              <img src="./assets/image-computer.png" alt="" />
+            </figure>
+              <ul class="section__keep__advantages-list">
+                <li class="section__keep__advantages-item">
+                  <div class="section__keep__advantages-item_heading">
+                    Quick Search
+                  </div>
+                  <div class="section__keep__advantages-item_description">
+                    Easily search your snippets by content, category, web address,
+                    application, and more.
+                  </div>
+                </li>
+                <li class="section__keep__advantages-item">
+                  <div class="section__keep__advantages-item_heading">
+                    iCloud Sync
+                  </div>
+                  <div class="section__keep__advantages-item_description">
+                    Instantly saves and syncs snippets across all your devices.
+                  </div>
+                </li>
+                <li class="section__keep__advantages-item">
+                  <div class="section__keep__advantages-item_heading">
+                    Complete History
+                  </div>
+                  <div class="section__keep__advantages-item_description">
+                    Retrieve any snippets from the first moment you started using
+                    the app.
+                  </div>
+                </li>
+              </ul>
 
-          <li class="container__advantages__item item-access">
-            <div class="advantages__item__heading">
-              Access Clipboard Anywhere
-            </div>
-            <div class="advantages__item__description item__description_access">
-              Whether you’re on the go, or at your computer, you can access all
-              your Clipboard snippets in a few simple clicks.
-            </div>
-          </li>
+          </div>
+        </section>
 
-          <li class="container__advantages__item item-workflow">
-            <div class="advantages__item__heading">
-              Supercharge your workflow
+        <section class="main-container__section main-container__section_access">
+          <div class="layout">
+            <div class="section_access_wrap">
+              <div class="inner-layout">
+                <div
+                        class="main-container__section_heading main-container__section_access_heading"
+                >
+                  Access Clipboard Anywhere
+                </div>
+                <div
+                        class="main-container__section_description main-container__section_access_description"
+                >
+                  Whether you’re on the go, or at your computer, you can access
+                  all your Clipboard snippets in a few simple clicks.
+                </div>
+              </div>
+                <figure class="section_access_description__pic__wrap">
+                  <img src="./assets/image-devices.png" alt="" />
+                </figure>
             </div>
-            <div class="advantages__item__description">
-              We’ve got the tools to boost your productivity.
+          </div>
+        </section>
+
+        <section
+          class="main-container__section main-container__section_workflow"
+        >
+          <div class="layout">
+            <div class="inner-layout">
+              <div
+                      class="main-container__section_heading main-container__section_workflow_heading"
+              >
+                Supercharge your workflow
+              </div>
+              <div
+                      class="main-container__section_description main-container__section_workflow_description"
+              >
+                We’ve got the tools to boost your productivity.
+              </div>
             </div>
-            <ul class="advantages__item__inner-list">
-              <li class="advantages__inner-item inner-item__blacklists">
-                <div class="inner-item__heading">Create blacklists</div>
-                <div class="inner-item__description">
+            <ul class="section_workflow__inner-list">
+              <li
+                      class="section_workflow__inner-item section_workflow__inner-item_blacklist"
+              >
+                <div class="section_workflow__inner-item_heading">
+                  Create blacklists
+                </div>
+                <div class="section_workflow__inner-item_description">
                   Ensure sensitive information never makes its way to your
                   clipboard by excluding certain sources.
                 </div>
               </li>
-              <li class="advantages__inner-item inner-item__snippets">
-                <div class="inner-item__heading">Plain text snippets</div>
-                <div class="inner-item__description">
+              <li
+                      class="section_workflow__inner-item section_workflow__inner-item_snippets"
+              >
+                <div class="section_workflow__inner-item_heading">
+                  Plain text snippets
+                </div>
+                <div class="section_workflow__inner-item_description">
                   Remove unwanted formatting from copied text for a consistent
                   look.
                 </div>
               </li>
-              <li class="advantages__inner-item inner-item__preview">
-                <div class="inner-item__heading">Sneak preview</div>
-                <div class="inner-item__description">
-                  Quick preview of all snippets on your Clipboard for easy
-                  access.
+              <li
+                      class="section_workflow__inner-item section_workflow__inner-item_preview"
+              >
+                <div class="section_workflow__inner-item_heading">
+                  Sneak preview
+                </div>
+                <div class="section_workflow__inner-item_description">
+                  Quick preview of all snippets on your Clipboard for easy access.
                 </div>
               </li>
             </ul>
-          </li>
-        </ul>
+          </div>
 
-        <ul class="main__container__corporation__list">
-          <li class="corporation__item item__google"></li>
-          <li class="corporation__item item__ibm"></li>
-          <li class="corporation__item item__microsoft"></li>
-          <li class="corporation__item item__hewlett"></li>
-          <li class="corporation__item item__vector-graphic"></li>
-        </ul>
+        </section>
+
+
+      <div class="main__container__corporation__list_wrap">
+        <div class="layout">
+          <ul class="main__container__corporation__list">
+            <figure class="corporation__item item__google">
+              <img src="./assets/logo-google.png" alt="">
+            </figure>
+            <figure class="corporation__item item__ibm">
+              <img src="./assets/logo-ibm.png" alt="">
+            </figure>
+            <figure class="corporation__item item__microsoft">
+              <img src="./assets/logo-microsoft.png" alt="">
+            </figure>
+            <figure class="corporation__item item__hewlett">
+              <img src="./assets/logo-hp.png" alt="">
+            </figure>
+            <figure class="corporation__item item__vector-graphic">
+              <img src="./assets/logo-vector-graphics.png" alt="">
+            </figure>
+          </ul>
+        </div>
+      </div>
+
         <div class="container__download container__download_bottom-box">
-          <div class="container__download_heading">
-            Clipboard for iOS and Mac OS
-          </div>
-          <div class="container__download_description">
-            Available for free on the App Store. Download for Mac or iOS, sync
-            with iCloud and you’re ready to start adding to your clipboard.
-          </div>
-          <div class="container__download_button-wrap">
-            <a href="#" class="btn btn_ios">Download for iOS</a>
-            <a href="#" class="btn btn_mac">Download for Mac</a>
+          <div class="layout">
+            <div class="inner-layout">
+              <div class="container__download_bottom-box_heading">
+                Clipboard for iOS and Mac OS
+              </div>
+              <div class="container__download_bottom-box_description">
+                Available for free on the App Store. Download for Mac or iOS, sync
+                with iCloud and you’re ready to start adding to your clipboard.
+              </div>
+              <div class="container__download_buttons-wrap">
+                <a href="#" class="btn btn_ios">Download for iOS</a>
+                <a href="#" class="btn btn_mac">Download for Mac</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -147,15 +219,15 @@
     <footer class="footer">
       <div class="layout">
         <div class="footer__wrap">
-          <figure class="logo__wrap">
+          <a class="logo__wrap">
             <img src="./assets/logo.svg" alt="" />
-          </figure>
+          </a>
           <div class="footer__support-list">
-            <div class="support-list__item">FAQs</div>
-            <div class="support-list__item">Contact Us</div>
-            <div class="support-list__item">Privacy Policy</div>
-            <div class="support-list__item">Press Kit</div>
-            <div class="support-list__item">Install Guide</div>
+            <a href="#" class="support-list__item">FAQs</a>
+            <a href="#" class="support-list__item">Contact Us</a>
+            <a href="#" class="support-list__item">Privacy Policy</a>
+            <a href="#" class="support-list__item">Press Kit</a>
+            <a href="#" class="support-list__item">Install Guide</a>
           </div>
           <div class="footer__social-media__list">
             <a class="social-media__item social-media__item_facebook"></a>
